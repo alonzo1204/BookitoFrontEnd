@@ -12514,7 +12514,7 @@ input:focus {
 /* Sidebar */
 .sidebar {
   min-height: calc(100vh - 63px);
-  background: #ffffff;
+  background: #424949  ;
   font-family: "Poppins", sans-serif;
   padding: 0;
   width: 255px;
@@ -12575,12 +12575,12 @@ input:focus {
         width: 16px;
         line-height: 1;
         font-size: 18px;
-        color: #979797; }
+        color: #ffffff; }
         .rtl .sidebar .nav .nav-item .nav-link .menu-icon {
           margin-right: 0;
           margin-left: 1.25rem; }
       .sidebar .nav .nav-item .nav-link .menu-title {
-        color: inherit;
+        color: #ffffff;
         display: inline-block;
         font-size: 12px;
         line-height: 1;
@@ -12588,12 +12588,12 @@ input:focus {
       .sidebar .nav .nav-item .nav-link .badge {
         margin-left: auto; }
       .sidebar .nav .nav-item .nav-link:hover {
-        color: #3d3d3d; }
+        color: #C0392B; }
     .sidebar .nav .nav-item.active > .nav-link {
-      color: #308ee0; }
+      color: #C0392B; }
       .sidebar .nav .nav-item.active > .nav-link .menu-title,
       .sidebar .nav .nav-item.active > .nav-link i {
-        color: inherit; }
+        color: #C0392B; }
     .sidebar .nav .nav-item.nav-profile .nav-link {
       display: -webkit-flex;
       display: flex;
@@ -12621,8 +12621,8 @@ input:focus {
           .sidebar .nav .nav-item.nav-profile .nav-link .user-wrapper .text-wrapper .designation {
             margin-right: 3px; }
     .sidebar .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile) > .nav-link {
-      background: #fafbfc;
-      color: #4a4a4a; }
+      background: #C0392B;
+      color: #C0392B; }
     .sidebar .nav.sub-menu {
       margin-bottom: 0;
       padding: 0 0 0 4rem; }
@@ -12634,14 +12634,14 @@ input:focus {
         height: auto; }
         .sidebar .nav.sub-menu .nav-item .nav-link.active {
           color: #308ee0;
-          background: transparent; }
+          background: #C0392B; }
           .sidebar .nav.sub-menu .nav-item .nav-link.active:before {
             background: #308ee0; }
       .sidebar .nav.sub-menu .nav-item:hover > .nav-link {
         background: initial;
-        color: #000; }
+        color: #C0392B; }
         .sidebar .nav.sub-menu .nav-item:hover > .nav-link:before {
-          background: #000; }
+          background: #C0392B; }
 
 .sidebar-dark .sidebar {
   background: #161a27; }
@@ -12692,7 +12692,7 @@ input:focus {
 /* Navbar */
 .navbar.default-layout {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(120deg, #00e4d0, #5983e8);
+  background: linear-gradient(120deg, #424949 18%, #c0392b);
   transition: background 0.25s ease;
   -webkit-transition: background 0.25s ease;
   -moz-transition: background 0.25s ease;
@@ -12702,7 +12702,7 @@ input:focus {
     -webkit-transition: width 0.25s ease, background 0.25s ease;
     -moz-transition: width 0.25s ease, background 0.25s ease;
     -ms-transition: width 0.25s ease, background 0.25s ease;
-    background: #ffffff;
+    
     width: 255px;
     height: 63px; }
     .sidebar-dark .navbar.default-layout .navbar-brand-wrapper {
