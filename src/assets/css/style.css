@@ -14941,6 +14941,17 @@ ul {
   height: 100%;
 }
 
+.rtl-form-rg {
+  width:480px; 
+  background:#424949; 
+  padding-top: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  
+  float: left; 
+  height: 100%;
+}
+
 /*-------------------------------------------------------------------*/
 /* === Landing screens === */
 /* Auth */
@@ -14949,7 +14960,7 @@ ul {
   background-size: cover; }
 
 .auth.register-bg-1 {
-  background: url("../images/auth/register.jpg") center center no-repeat;
+  background: url("../images/auth/Biblioteca_1.jpg") center center no-repeat;
   background-size: cover; }
 
 .auth.theme-one .auto-form-wrapper {

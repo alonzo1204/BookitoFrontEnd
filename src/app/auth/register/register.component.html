@@ -1,43 +1,57 @@
 <div class="page-body-wrapper full-page-wrapper auth-page">
-    <div class="content-wrapper d-flex align-items-center auth register-bg-1 theme-one">
-        <div class="row w-100">
-            <div class="col-lg-4 mx-auto">
-                <h2 class="text-center mb-4">Registro</h2>
-                <div class="auto-form-wrapper">
+    <div class="content-wrapper-nopadding auth register-bg-1 theme-one">
+        
+            <div class="rtl-form-rg">
+                <h1 class="text-center mb-4" style="color:white;">Registro</h1>
+                <div class="card-body">
                     <form action="#">
                         <div class="form-group">
-                            <div class="input-group">
-                                <input type="email" class="form-control" placeholder="Correo">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">
-                      <i class="fa fa-check-circle"></i>
-                    </span>
+                                <label class="label" style="color:whitesmoke;">Nombre de Alumno</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="email" class="form-control" placeholder="Nombre">
                                 </div>
+                            </div>
+
+
+                        <div class="form-group">
+                            <label class="label" style="color:whitesmoke;">Usuario</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="email" class="form-control" placeholder="Código de alumno">
+                                
                             </div>
                         </div>
                         <div class="form-group">
+                            <label class="label" style="color:whitesmoke;">Contreseña</label>
                             <div class="input-group">
-                                <input type="password" class="form-control" placeholder="Password">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">
-                      <i class="fa fa-check-circle"></i>
-                    </span>
+                                
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
+                                <input type="password" class="form-control" placeholder="Contraseña">
+                                
                             </div>
                         </div>
+                        <br>
 
                         <div class="form-group">
                             <button class="btn btn-primary submit-btn btn-block">Crear cuenta</button>
                         </div>
+
                         <div class="text-block text-center my-3">
-                            <span class="text-small font-weight-semibold">¿Ya tienes una cuenta?</span>
+                            <span class="card-title font-weight-semibold" style="color:whitesmoke;">¿Ya tienes una cuenta?</span>
                             <br>
-                            <a routerLink="/login" class="text-black text-small">Login</a>
+                            <a routerLink="/login" class="text-black text-small" style="color:whitesmoke;">Login</a>
                         </div>
                     </form>
                 </div>
             </div>
-        </div>
+        
     </div>
     <!-- content-wrapper ends -->
 </div>
