@@ -12517,7 +12517,7 @@ input:focus {
   background: #424949  ;
   font-family: "Poppins", sans-serif;
   padding: 0;
-  width: 255px;
+  width: 245px;
   z-index: 11;
   transition: width 0.25s ease, background 0.25s ease;
   -webkit-transition: width 0.25s ease, background 0.25s ease;
@@ -12538,7 +12538,7 @@ input:focus {
       padding: 16px 35px;
       white-space: nowrap;
       height: 52px;
-      color: #4a4a4a; }
+      color: #ffffff; }
       .sidebar .nav .nav-item .nav-link i.menu-arrow {
         margin-left: auto;
         margin-right: 0;
@@ -12588,7 +12588,7 @@ input:focus {
       .sidebar .nav .nav-item .nav-link .badge {
         margin-left: auto; }
       .sidebar .nav .nav-item .nav-link:hover {
-        color: #C0392B; }
+        color: #ffffff; }
     .sidebar .nav .nav-item.active > .nav-link {
       color: #C0392B; }
       .sidebar .nav .nav-item.active > .nav-link .menu-title,

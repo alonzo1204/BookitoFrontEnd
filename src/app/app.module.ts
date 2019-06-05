@@ -16,8 +16,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { ReglamentoComponent } from './reglamento/reglamento.component';
 
-import { TwoDigitDecimalNumberDirective } from './two-digits-number-validation.directive';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -28,6 +28,7 @@ import { ClienteAPIService } from './services/cliente-api.service';
 import { MetaahorroAPIService } from './services/metaahorro-api.service';
 import { RecompensaAPIService } from './services/recompensa-api.service';
 import { TransaccionAPIService } from './services/transaccion-api.service';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { TransaccionAPIService } from './services/transaccion-api.service';
     NavbarComponent,
     SidebarComponent,
     CategoriaComponent,
-    TwoDigitDecimalNumberDirective
+    ReglamentoComponent,
+ 
   ],
   imports: [
     BrowserModule,
