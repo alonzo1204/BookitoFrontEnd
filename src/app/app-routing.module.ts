@@ -5,6 +5,9 @@ import { RegisterComponent } from './auth/register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { dashboardRoutes } from './dashboard/dashboard.routes';
 import { ReglamentoComponent } from './reglamento/reglamento.component';
+import { ReservaComponent } from './reserva/reserva.component';
+import { RecomendacionesComponent } from './recomendaciones/recomendaciones.component';
+import { ConsultaComponent } from './consulta/consulta.component';
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent },

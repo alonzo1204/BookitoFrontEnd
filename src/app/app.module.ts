@@ -17,6 +17,9 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { ReglamentoComponent } from './reglamento/reglamento.component';
+import { ReservaComponent } from './reserva/reserva.component';
+import { ConsultaComponent } from './consulta/consulta.component';
+import { RecomendacionesComponent } from './recomendaciones/recomendaciones.component';
 
 
 import { HttpClientModule } from '@angular/common/http';
@@ -28,6 +31,7 @@ import { ClienteAPIService } from './services/cliente-api.service';
 import { MetaahorroAPIService } from './services/metaahorro-api.service';
 import { RecompensaAPIService } from './services/recompensa-api.service';
 import { TransaccionAPIService } from './services/transaccion-api.service';
+
 
 
 @NgModule({
@@ -44,6 +48,9 @@ import { TransaccionAPIService } from './services/transaccion-api.service';
     SidebarComponent,
     CategoriaComponent,
     ReglamentoComponent,
+    ReservaComponent,
+    ConsultaComponent,
+    RecomendacionesComponent,
  
   ],
   imports: [

@@ -3,23 +3,36 @@
     <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
        
            
-        <a routerLink="/categoria" class="navbar-brand ">
+        <a routerLink="/recomendaciones" class="navbar-brand ">
             <img style="width:80px; height:70px;" src="assets/images/LOGO.png" alt="logo" />
             
         </a>
-
-    
     </div>
-
+    
     <div class="navbar-menu-wrapper d-flex align-items-center">
 
+   
+            
+        
+          <input id="" class="form-control" 
+         data-role="search-input" type="search" name="term" value=""
+          placeholder="Título, autor, codigo ISBN, Sede..." autocapitalize="off" 
+        autocorrect="off" autocomplete="off"  dir="auto" 
+        style="width:600px;height:150x; color: rgb(190, 190, 190); border: none;position: relative;
+         vertical-align: top; background-color: rgb(32, 32, 32);"> 
+        
+        <button class="form-control" routerLink="/categoria"  style=" border: none;background-color: rgb(54, 54, 54);width:40px;height:150x;">
+             <i class="fa fa-search" style="color: whitesmoke" ></i>
+         </button>
+
         <ul class="navbar-nav navbar-nav-right">
+           
 
             <li class="nav-item d-none d-sm-inline-block">
                
                 <a routerLink="/categoria" class="nav-link">
-                    <i class="fas fa-user-circle " aria-hidden="true" ></i>
-                    <span class="menu-title">  Bienvenido !</span>
+                    <i class="fas fa-user-circle " style="font-size:35px" aria-hidden="true" ></i>
+                    <span class="menu-title">  Bienvenido!</span>
                 </a>
                
         
@@ -28,6 +41,8 @@
         <button class="navbar-toggler navbar-toggler-right d-sm-none align-self-center" type="button" data-toggle="offcanvas">
       <span class="icon-menu"></span>
     </button>
+
+    
     </div>
 </nav>
 <!-- partial -->
