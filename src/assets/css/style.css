@@ -9714,9 +9714,12 @@ input[type="button"].btn-block {
 .nav {
   display: flex;
   flex-wrap: wrap;
+  position:fixed;
   padding-left: 0;
-  margin-bottom: 0;
-  list-style: none; }
+  height: 100%;
+  z-index:1;
+  list-style: none;
+overflow-x: hidden; }
 
 .nav-link {
   display: block;
@@ -12513,7 +12516,7 @@ input:focus {
 
 /* Sidebar */
 .sidebar {
-  min-height: calc(100vh - 63px);
+  height: 100%;
   background: #424949  ;
   font-family: "Poppins", sans-serif;
   padding: 0;
