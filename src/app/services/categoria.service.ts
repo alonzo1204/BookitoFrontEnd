@@ -12,7 +12,9 @@ export class CategoriaService {
 
     getCategories(){
         let endpoint = this.backendUrl;
-        return this.http.get(endpoint);
+        let header = new HttpHeaders({'Authorization': "Basic " + btoa("admin:p@55w0Rd")})
+        console.log('my header ', header);
+        return this.http.get(endpoint,{headers: header});
     }
 
     saveCategory(obj){
@@ -22,7 +24,9 @@ export class CategoriaService {
 
     deleteCategory(id){
         let endpoint = this.backendUrl + "/delete/" + id;
-        return this.http.delete(endpoint);
+        let header = new HttpHeaders({'Authorization': "Basic " + btoa("admin:p@55w0Rd")})
+        console.log('my header ', header);
+        return this.http.delete(endpoint, {headers: header});
     }
 
 }

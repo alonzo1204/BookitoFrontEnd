@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { log } from 'util';
-import { CategoriapersonalizadaAPIService } from '../services/categoriapersonalizada-api.service';
+import { CategoriaService } from '../services/categoria.service';
+
 
 @Component({
   selector: 'app-categoria',
@@ -9,80 +10,38 @@ import { CategoriapersonalizadaAPIService } from '../services/categoriapersonali
 })
 export class CategoriaComponent implements OnInit {
 
-  private description = '';
-  private name = '';
-
-  private categorias = [];
-
-  private cliente;
-
-  private categoriasPersonalizadas;
-
-  constructor(private categoriaPersonalizada: CategoriapersonalizadaAPIService) { }
-
+  public categoriaForm = {};
+  public categorias = [];
+  constructor(public _categoriaService: CategoriaService) { }
+  
   ngOnInit() {
-    this.getLocalStorage();
-    this.getCliente();
-    this.getCategoriaPersonalizadaPorCliente();
-  }
-
-  changeCategoria() {
-    this.saveLocalStorage();
-  }
-
-  getCliente() {
-    let cliente = {
-      docId: "71653252",
-      docIdType: "DNI",
-      email: "marcesftwr2@gmail.com",
-      id: 1,
-      name: "Marcelo",
-      phoneNumber: "956868516"
+    this.categoriaForm = {
+      nombre: '',
+      descripcion: '',
+      codigo: '',
     }
-    this.cliente = cliente;
+    console.log('Encrypt ', btoa("admin:p@55w0Rd"));
+    this.loadCategories();
   }
 
-  getCategoriaPersonalizadaPorCliente() {
-    const _this = this;
-    this.categoriaPersonalizada.getCategoriaPersonalizadaPorCliente(this.cliente.id)
-    .subscribe(categoriasPersonalizada => { 
-      _this.categoriasPersonalizadas = JSON.parse(JSON.stringify(categoriasPersonalizada));
-      console.log(categoriasPersonalizada);
-      for (let i in _this.categoriasPersonalizadas) {
-        _this.categorias.push(_this.categoriasPersonalizadas[i]);
-      }
+  loadCategories(){
+    this._categoriaService.getCategories().subscribe((result: any) => {
+      this.categorias = result;
+      console.log(this.categorias);
     })
   }
 
-  saveCategoriaPersonalizada() {
-    let categoriaPersonalizada = {
-      cliente: this.cliente,
-      description: this.description,
-      name: this.name,
-    }
-    this.categoriaPersonalizada.saveCategoriaPersonalizada(categoriaPersonalizada)
-    .subscribe(categoriaPersonalizada => { 
-      this.categoriasPersonalizadas.push(categoriaPersonalizada);
-      this.description = '';
-      this.name = '';
-      this.saveLocalStorage();
+  deleteCategory(id){
+    this._categoriaService.deleteCategory(id).subscribe((result: any) => {
+      alert('Categoria eliminada con éxito');
+      this.loadCategories();
     })
   }
-
-  saveLocalStorage() {
-    let categoria = {
-      description: this.description,
-      name: this.name
-    }
-    localStorage.setItem('categoriaPersonalizada', JSON.stringify(categoria));
+  saveCategory(){
+    this._categoriaService.saveCategory(this.categoriaForm).subscribe((result: any) => {
+      alert("Categoria guardada");
+      console.log(result);
+      this.loadCategories();
+    })
   }
-
-  getLocalStorage() {
-    let localStorageItem = JSON.parse(localStorage.getItem('categoriaPersonalizada'));
-    if (localStorageItem) {
-      this.description = localStorageItem.description;
-      this.name = localStorageItem.name;
-    }
-  }
-
 }
