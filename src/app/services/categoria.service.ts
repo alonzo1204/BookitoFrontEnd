@@ -1,32 +1,35 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Constants } from '../shared/Constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoriaService {
 
-    backendUrl =  "http://localhost:8090/categorias";
+    private categorias_url = Constants.URL_BACK_API + '/categorias'
 
     constructor(private http: HttpClient) { }
 
     getCategories(){
-        let endpoint = this.backendUrl;
-        let header = new HttpHeaders({'Authorization': "Basic " + btoa("admin:p@55w0Rd")})
-        console.log('my header ', header);
-        return this.http.get(endpoint,{headers: header});
+        const header = new HttpHeaders()
+            .set('Content-type', 'application/json')
+            .append('Authorization', 'Basic ' + localStorage.getItem('security'));
+        return this.http.get(this.categorias_url,{headers: header});
     }
 
     saveCategory(obj){
-        let endpoint = this.backendUrl + "/save";
-        return this.http.post(endpoint,obj);
+        const header = new HttpHeaders()
+            .set('Content-type', 'application/json')
+            .append('Authorization', 'Basic ' + localStorage.getItem('security'));
+        return this.http.post(this.categorias_url + '/save',obj,{headers: header});
     }
 
     deleteCategory(id){
-        let endpoint = this.backendUrl + "/delete/" + id;
-        let header = new HttpHeaders({'Authorization': "Basic " + btoa("admin:p@55w0Rd")})
-        console.log('my header ', header);
-        return this.http.delete(endpoint, {headers: header});
+        const header = new HttpHeaders()
+            .set('Content-type', 'application/json')
+            .append('Authorization', 'Basic ' + localStorage.getItem('security'));
+        return this.http.delete(this.categorias_url + '/delete' + id, {headers: header});
     }
 
 }
