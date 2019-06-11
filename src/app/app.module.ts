@@ -16,11 +16,14 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { ReglamentoComponent } from './reglamento/reglamento.component';
 import { ReservaComponent } from './reserva/reserva.component';
 import { ConsultaComponent } from './consulta/consulta.component';
-
+import { AuthenticateRoute } from './shared/authroutes';
 
 import { HttpClientModule } from '@angular/common/http';
 
 //Services
+import { CategoriaService } from './services/categoria.service';
+import { AuthenticationService } from './services/authentication.service';
+import { HandlerComponent } from './handler/handler.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     CategoriaComponent,
     ReglamentoComponent,
     ReservaComponent,
-    ConsultaComponent, 
+    ConsultaComponent,
+    HandlerComponent, 
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [CategoriaService,AuthenticationService,AuthenticateRoute],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

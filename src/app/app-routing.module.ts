@@ -7,6 +7,7 @@ import { dashboardRoutes } from './dashboard/dashboard.routes';
 import { ReglamentoComponent } from './reglamento/reglamento.component';
 import { ReservaComponent } from './reserva/reserva.component';
 import { ConsultaComponent } from './consulta/consulta.component';
+import { AuthenticateRoute } from './shared/authroutes';
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
     {
         path: '',
         component: DashboardComponent,
-        children: dashboardRoutes
+        children: dashboardRoutes,
+        canActivate: [AuthenticateRoute]
     },
     { path: '**', redirectTo: '' }
 ];
