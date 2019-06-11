@@ -4,14 +4,14 @@
             <div class="rtl-form">
                 <h1 class="text-center mb-4" style="color:white;">Bookito</h1>
                 <div class="card-body">
-                    <form action="#">
+                    <form>
                         <div class="form-group">
                             <label class="label" style="color:whitesmoke;">Usuario</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="email" class="form-control" placeholder="Código de alumno">
+                                <input type="text" class="form-control" name="codigo" [(ngModel)] = "loginForm.codigo" placeholder="Código de alumno">
                                
                             </div>
                         </div>
@@ -21,14 +21,14 @@
                                 <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input type="password" class="form-control" placeholder="*********">
+                                <input type="password" class="form-control" name="password" [(ngModel)]="loginForm.password"  placeholder="*********">
                                
                             </div>
                         </div>
                         <br>
 
                         <div class="form-group">
-                            <button class="btn btn-primary submit-btn btn-block">Iniciar Sesión</button>
+                            <button class="btn btn-primary submit-btn btn-block" (click)="login()">Iniciar Sesión</button>
                         </div>
 
 

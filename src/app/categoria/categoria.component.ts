@@ -20,14 +20,12 @@ export class CategoriaComponent implements OnInit {
       descripcion: '',
       codigo: '',
     }
-    console.log('Encrypt ', btoa("admin:p@55w0Rd"));
     this.loadCategories();
   }
 
   loadCategories(){
     this._categoriaService.getCategories().subscribe((result: any) => {
       this.categorias = result;
-      console.log(this.categorias);
     })
   }
 
